@@ -1,0 +1,371 @@
+@media (max-width: 640px) {
+	body {
+		font-size: 0.65rem;
+
+		.navbar {
+			width: 100%;
+			z-index: 10;
+			padding: 0.5rem 1rem;
+			border-bottom-left-radius: unset;
+			border-bottom-right-radius: unset;
+			box-shadow: unset;
+
+			img.logo {
+				width: 2.25rem;
+				height: 2.25rem;
+			}
+
+			nav {
+				position: fixed;
+				z-index: -1;
+				top: -100vh;
+				left: 0;
+				width: 100%;
+				height: 100vh;
+				grid-template-columns: auto;
+				gap: 2.5rem;
+				place-items: center;
+				place-content: center;
+				background: inherit;
+				transition: 0.375s;
+
+				button {
+					width: 10rem;
+					height: 3.25rem;
+					font-size: 1.5em;
+				}
+			}
+
+			.nav-btn {
+				display: block;
+				height: 2.25rem;
+				width: 2.25rem;
+
+				svg {
+					width: 100%;
+					height: 100%;
+					pointer-events: none;
+					stroke: rgba(255, 255, 0, 0.875);
+					stroke-width: 0.375rem;
+
+					path {
+						transition: 0.375s;
+						transform-origin: left;
+					}
+				}
+
+				&.opened svg {
+					path:nth-child(1) {
+						transform: rotate(35deg);
+					}
+					path:nth-child(2) {
+						transform: rotateY(90deg);
+					}
+					path:nth-child(3) {
+						transform: rotate(-35deg);
+					}
+				}
+			}
+		}
+
+		main {
+			section {
+				padding: 5rem 7.5%;
+			}
+
+			section.home {
+				height: 100%;
+				grid-template-columns: auto;
+				padding: 20% 10%;
+				gap: 2rem;
+
+				.content .more.active {
+					height: 20rem;
+					padding: 0.75rem 0;
+				}
+
+				img {
+					width: 50%;
+					transform: rotate(-45deg);
+					-webkit-transform: rotate(-45deg);
+					place-self: start;
+				}
+			}
+
+			section.skills {
+				.techs {
+					height: 30rem;
+
+					.refresh {
+						width: 1.75rem;
+						height: 1.75rem;
+					}
+
+					.card {
+						.brand-logo {
+							height: 3.25rem;
+						}
+
+						.content {
+							top: 20%;
+						}
+
+						&.html {
+							clip-path: polygon(
+								0 0,
+								59.5% 0,
+								39.5% 9.5%,
+								0 19.5%
+							);
+
+							.brand-logo {
+								top: 2.5%;
+								left: 12.5%;
+							}
+						}
+
+						&.css {
+							clip-path: polygon(
+								60.5% 0,
+								100% 0,
+								100% 24.5%,
+								40.5% 9.5%
+							);
+
+							.brand-logo {
+								top: 3.75%;
+								left: 75%;
+							}
+						}
+
+						&.js {
+							clip-path: polygon(
+								0 20%,
+								40% 10%,
+								80% 20%,
+								40% 30%
+							);
+
+							.brand-logo {
+								top: 15%;
+								left: 33.5%;
+							}
+						}
+
+						&.reactJs {
+							clip-path: polygon(
+								0 20.5%,
+								39.5% 30.5%,
+								39.5% 49.5%,
+								0 39.5%
+							);
+
+							.brand-logo {
+								top: 30%;
+								left: 12.5%;
+							}
+						}
+
+						&.bootstrap {
+							clip-path: polygon(
+								41% 30.5%,
+								80.5% 20.5%,
+								100% 25%,
+								100% 49.5%
+							);
+
+							.brand-logo {
+								top: 28.5%;
+								left: 75.5%;
+							}
+						}
+
+						&.sass {
+							clip-path: polygon(
+								0 40.5%,
+								41.5% 50.5%,
+								64% 60%,
+								0 65%
+							);
+
+							.brand-logo {
+								top: 50%;
+								left: 15%;
+							}
+						}
+
+						&.typescript {
+							clip-path: polygon(
+								40.5% 31%,
+								100% 50.5%,
+								65.5% 59.5%,
+								40.5% 49.5%
+							);
+
+							.brand-logo {
+								top: 42.5%;
+								left: 56%;
+							}
+						}
+
+						&.jquery {
+							clip-path: polygon(
+								0 65.5%,
+								64.5% 60.5%,
+								64.5% 73%,
+								0 90.5%
+							);
+
+							.brand-logo {
+								top: 68%;
+								left: 20%;
+							}
+						}
+
+						&.gsap {
+							clip-path: polygon(
+								65.5% 60.5%,
+								100% 51%,
+								100% 85.5%,
+								65.5% 73%
+							);
+
+							.brand-logo {
+								top: 61%;
+								left: 72.5%;
+							}
+						}
+
+						&.npm {
+							clip-path: polygon(
+								0 91%,
+								64.5% 73.5%,
+								49.5% 100%,
+								0 100%
+							);
+
+							.brand-logo {
+								top: 85%;
+								left: 25%;
+							}
+						}
+
+						&.git {
+							clip-path: polygon(
+								65.5% 73.5%,
+								100% 86%,
+								100% 100%,
+								50.5% 100%
+							);
+
+							.brand-logo {
+								top: 85%;
+								left: 70%;
+							}
+						}
+
+						&.open {
+							clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+							.brand-logo {
+								top: 10%;
+								left: 10%;
+							}
+						}
+
+						&.close {
+							clip-path: polygon(
+								100% 0,
+								100% 0,
+								100% 100%,
+								100% 100%
+							);
+						}
+					}
+				}
+			}
+
+			section.projects {
+				.list {
+					grid-template-columns: 1fr;
+					gap: 3.5rem;
+
+					.project {
+						grid-template-columns: 1fr 1fr;
+						gap: 1rem;
+
+						.preview {
+							width: 100%;
+							height: 7.5rem;
+						}
+
+						.content {
+							place-self: center;
+
+							p {
+								margin: 0.75rem 0;
+								width: 100%;
+							}
+						}
+
+						.links {
+							a {
+								width: 6.5rem;
+								padding: 0.25rem 0.5rem;
+								margin: 0.5rem 0;
+
+								object {
+									width: 0.5rem;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			section.contact {
+				.contact-details {
+					grid-column: 1/4;
+					.detail {
+						margin: 1.5rem 0;
+
+						object {
+							width: 1.25rem;
+							margin-right: 1rem;
+						}
+					}
+				}
+
+				.form {
+					grid-column: 1/4;
+				}
+
+				.modal-message {
+					right: 1.5%;
+					width: 18rem;
+					height: 10rem;
+					border-radius: 0.5rem;
+					padding: 1rem;
+				}
+			}
+		}
+
+		.socials {
+			bottom: 1%;
+			left: 1%;
+
+			.icon {
+				width: 1.75rem;
+				height: 1.75rem;
+			}
+		}
+
+		button.back-to-top {
+			width: 1.75rem;
+			height: 1.75rem;
+			bottom: 1%;
+			right: 1%;
+			padding: 0.25rem;
+		}
+	}
+}

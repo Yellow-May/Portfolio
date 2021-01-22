@@ -1,0 +1,91 @@
+section.home {
+	height: 100vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	place-items: center;
+	padding: 0 10%;
+	background: unset;
+	gap: unset;
+	background: white;
+
+	.content {
+		width: 100%;
+		background: url("/dist/imgs/img040640.jpg") center center/cover;
+		background-clip: text;
+		-webkit-background-clip: text;
+
+		span {
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.25rem;
+			padding-bottom: 1.5rem;
+			display: block;
+			color: transparent;
+
+			&:nth-child(1) {
+				font-size: 1.375em;
+			}
+
+			&:nth-child(2) {
+				font-size: 1.875em;
+			}
+
+			&:nth-child(3) {
+				font-size: 1.375em;
+			}
+		}
+
+		button {
+			width: 15rem;
+			cursor: pointer;
+			padding: 0.5rem;
+			text-transform: capitalize;
+			letter-spacing: 0.25rem;
+			border: thin solid rgba(black, 0.25);
+			border-radius: 0.5rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 1.25em;
+			color: transparent;
+
+			object {
+				width: 1rem;
+			}
+		}
+
+		.more {
+			height: 0;
+			color: transparent;
+			font-size: 1.25em;
+			line-height: 1.6;
+			letter-spacing: 0.25rem;
+			word-spacing: 0.25rem;
+			transition: 0.5s;
+			overflow: hidden;
+
+			p {
+				margin-bottom: 0.25rem;
+
+				a {
+					color: rgba(255, 255, 0, 0.5);
+				}
+			}
+		}
+
+		.more.active {
+			height: 18rem;
+			padding: 1rem;
+		}
+	}
+
+	img {
+		width: 100%;
+		border-radius: 50%;
+		transform-origin: center;
+		transform: rotate(-45deg) scale(0.75);
+		-webkit-transform-origin: center;
+		-webkit-transform: rotate(-45deg) scale(0.75);
+	}
+}

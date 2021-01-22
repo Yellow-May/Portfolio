@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./imgs/logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Web Portfolio" />
+    <link rel="apple-touch-icon" href="./imgs/logo/logo192.png" />
+    <link rel="stylesheet" href="style.min.css">
+    <script src="main.js" defer></script>
+
+    <title>Yellow May | Portfolio</title>
+</head>
+
+<body>
+
+    <!-- floaters -->
+    <div class="socials">
+        <a href="https://github.com/Yellow-May" target="_blank" class="icon">
+            <object data="./imgs/svgs/github-square.svg" type="image/svg+xml">your browser does not support this
+                svg</object>
+        </a>
+        <a href="https://www.linkedin.com/in/precious-onyekwere-7a87001b5/" target="_blank" class="icon">
+            <object data="./imgs/svgs/linkedin.svg" type="image/svg+xml">your browser does not support this svg</object>
+        </a>
+        <a href="https://twitter.com/_Yellow_May" target="_blank" class="icon">
+            <object data="./imgs/svgs/twitter-square.svg" type="image/svg+xml">your browser does not support this
+                svg</object>
+        </a>
+    </div>
+
+    <!-- floater -->
+    <button class="back-to-top" id="backToTop" title="Go back to top of page">
+        <object data="./imgs/svgs/angle-up.svg" type="image/svg+xml">your browser does not support this svg</object>
+    </button>
+
+    <div class="navbar">
+        <img src="./imgs/logo/logo.png" alt="Yellow May Logo" class="logo">
+        <nav id="nav">
+            <button title="Home Link" id="home">
+                <span>Home</span>
+            </button>
+            <button title="Skills Link" id="skills">
+                <span>Skills</span>
+            </button>
+            <button title="Projects Link" id="projects">
+                <span>Projects</span>
+            </button>
+            <button title="Contact Link" id="contact">
+                <span>Contact</span>
+            </button>
+        </nav>
+        <button class="nav-btn" id="navBtn">
+            <svg viewbox="0 0 100 100">
+                <path d="M0 20,  h95" />
+                <path d="M25 50, h100" />
+                <path d="M0 80, h95" />
+            </svg>
+        </button>
+    </div>
+
+    <main>
+        <section class="home">
+            <div class="content">
+                <span>Hello!</span>
+                <span>I'm Onyekwere Precious</span>
+                <span>A Frontend Web Designer and Developer</span>
+                <button title="more" id="moreBtn">more about me <object data="./imgs/svgs/angle-down.svg"
+                        type="image/svg+xml">your
+                        browser does not support this svg</object></button>
+                <div class="more" id="more">
+                    <p>
+                        A self-taught frontend web developer from Nigeria since March 2020, graduated from <a
+                            href="http://crawforduniversity.edu.ng/crawford/" target="_blank">Crawford
+                            University</a>, Igbesa Ogun State, Nigeria with a bachelor degrees in Information and
+                        Communication technology in 2018.
+                    </p>
+                    <p>
+                        I am a self motivated person who takes the initiative to learn new things and explore untouched
+                        territory.
+                    </p>
+                    <p>
+                        I try my best to go beyond my limit for the purpose of broadening my horizon because <i>learning
+                            never has a limit.</i>
+                    </p>
+                </div>
+            </div>
+            <img src="./imgs/profile_002.jpg" alt="profile image">
+        </section>
+
+        <section class="skills">
+            <div class="intro">
+                <h1>SKILLS</h1>
+                <p>My skills and familiar web technologies</p>
+            </div>
+
+            <div class="techs">
+                <button class="refresh" id="refreshTechs" title="refresh Techs">
+                    <object data="./imgs/svgs/icons8-refresh.svg" type="image/svg+xml">your browser does not support
+                        this
+                        svg</object>
+                </button>
+                <div class="html card">
+                    <img src="./imgs/skills-brands/icons8-html-5-240.png" alt="HTML Logo" class="brand-logo">
+                    <div class="content">
+                        <h1>HTML5</h1>
+                        <ul>
+                            <li>Highly familiar with the HTML5 syntaxs and usages</li>
+                            <li>Effecient usage of tags</li>
+                            <li>Linking of 3rd party libraries to be implemented with the application/site</li>
+                            <li>Usage of head meta tags</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="css card">
+                    <img src="./imgs/skills-brands/icons8-css3-240.png" alt="CSS Logo" class="brand-logo">
+                    <div class="content">
+                        <h1>CSS3</h1>
+                        <ul>
+                            <li>Highly familiar with the CSS3 syntaxs and usages</li>
+                            <li>Create and usage of variables for intermdiate to large application</li>
+                            <li>Create complex effects and animation without the need for 3rd party applications</li>
+                            <li>Create responsive websites for various layouts</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="js card">
+                    <img src="./imgs/skills-brands/icons8-javascript-240.png" alt="JS Logo" class="brand-logo">
+                    <div class="content">
+                        <h1>JAVASCRIPT</h1>
+                        <ul>
+                            <li>Highly familiar with the modern Javascript syntaxs and usages</li>
+                            <li>Familiar with ES2015 syntax and usuage</li>
+                            <li>Manipulating the DOM extensively without the need for 3rd party library</li>
+                            <li>Create complex user interactions</li>
+                            <li>Working with 3rd party APIS to feed the web application/site</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="reactJs card">
+                    <img src="./imgs/skills-brands/icons8-react-480.png" alt="REACTJS Logo" class="brand-logo">
+                    <div class="content">
+                        <h1>REACT JS</h1>
+                        <ul>
+                            <li>Highly familiar with the ReactJs Framework syntaxs and usages</li>
+                            <li>Familiar with the structure and how to navigate through the structure</li>
+                            <li>Ability to create websites with routing capabilities</li>
+                            <li>Create Applicaions/Sites with reusable components that can be utilized in other projects
+                            </li>
+                            <li>Able to work well with 3rd parties dependecies to provide more features to projects</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bootstrap card">
+                    <img src="./imgs/skills-brands/icons8-bootstrap-240.png" alt="BOOTSTRAP Logo" class="brand-logo">
+                    <div class="content">
+                        <h1>BOOTSTRAP</h1>
+                        <ul>
+                            <li>Familiar with the usages of Bootstrap library's syntax</li>
+                            <li>Ability to work with Boostrap in intermdiate to large applications to provide responsive
+                                and beautify websites and application</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sass card">
+                    <img src="./imgs/skills-brands/icons8-sass-240.png" alt="SASS Logo" class="brand-logo">
+                    <div class="content">
+                        <h1>SASS</h1>
+                        <ul>
+                            <li>Familiar with the structure and syntax of Sass preprocessor</li>
+                            <li>Ability to work with Sass to build intermdiate to large applications</li>
+                            <li>Familiar with the application and usage in ReactJS Framework</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="typescript card">
+                    <img src="./imgs/skills-brands/icons8-typescript-240.png" alt="TYPESCRIPT Logo" class="brand-logo">
+                    <div class="content">
+                        <h1>TYPESCRIPT</h1>
+                        <ul>
+                            <li>Familiar with the usuage and syntax structure of Typescript</li>
+                            <li>Ability to work with typescript to reduce errors in developments in intermdiate and
+                                large projects</li>
+                            <li>Ability to work with typescript in both Vanilla JS and ReactJS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="jquery card">
+                    <img src="./imgs/skills-brands/icons8-jquery-250.png" alt="JQUERY Logo" class="brand-logo">
+                    <div class="content">
+                        <h1>JQUERY</h1>
+                        <ul>
+                            <li>Familiar with Jquery library's syntax</li>
+                            <li>Ability to work with jquery for DOM manipulation processes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gsap card">
+                    <img src="./imgs/skills-brands/gsap_logo.jpg" alt="GSAP Logo" class="brand-logo">
+                    <div class="content">
+                        <h1>GSAP</h1>
+                        <ul>
+                            <li>Familiar with Greensock Javascript Animation library</li>
+                            <li>Ability to work with this library to create simple and timelined animtions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="npm card">
+                    <img src="./imgs/skills-brands/icons8-npm-240.png" alt="NPM Logo" class="brand-logo">
+                    <div class="content">
+                        <h1>NPM</h1>
+                        <ul>
+                            <li>Familiar with the usuage and basic syntax of the Node Package Manager</li>
+                            <li>Ability to use the technology to apply 3rd party packages to better imporve the porjects
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="git card">
+                    <img src="./imgs/skills-brands/icons8-git-240.png" alt="GIT Logo" class="brand-logo">
+                    <div class="content">
+                        <h1>GIT</h1>
+                        <ul>
+                            <li>Familiar with GIT technology and syntax</li>
+                            <li>Ability to perform the basic task with GIT to make working in a team highly effecient
+                                and possible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="intro">
+                <h1>Projects</h1>
+            </div>
+            <div class="list">
+                <div class="project">
+                    <img src="./imgs/project-imgs/pomodoro-app.png" alt="pomodoro site" class="preview">
+                    <div class="content">
+                        <h1>Pomodoro Timer App</h1>
+                        <p>Developed with ReactJs, React Context Hook, Typescript and Sass</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://pomodoro-timer-counter.vercel.app/" target="_blank">
+                            <span>Live Site</span> <object data="./imgs/svgs/angle-right.svg" type="image/svg+xml">your
+                                browser does not support
+                                this svg</object>
+                        </a>
+                        <a href="https://github.com/Yellow-May/pomodoro-timer-counter" target="_blank">
+                            <span>Github Repo</span> <object data="./imgs/svgs/angle-right.svg"
+                                type="image/svg+xml">your browser does not support
+                                this svg</object>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="./imgs/project-imgs/netflix-clone.jpeg" alt="netflix site" class="preview">
+                    <div class="content">
+                        <h1>Netflix Website Clone</h1>
+                        <p>Developed with HTML, CSS and Javascript</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://netflix-yellow-may.netlify.app/" target="_blank">
+                            <span>Live Site</span> <object data="./imgs/svgs/angle-right.svg" type="image/svg+xml">your
+                                browser does not support
+                                this svg</object>
+                        </a>
+                        <a href="https://github.com/Yellow-May/Netflix-Clone" target="_blank">
+                            <span>Github Repo</span> <object data="./imgs/svgs/angle-right.svg"
+                                type="image/svg+xml">your browser does not support
+                                this svg</object>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="./imgs/project-imgs/tv-shows-info.jpeg" alt="series site" class="preview">
+                    <div class="content">
+                        <h1>TV Shows API Info Search</h1>
+                        <p>Developed with HTML, CSS and Vanilla Js</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://series-search.netlify.app" target="_blank">
+                            <span>Live Site</span> <object data="./imgs/svgs/angle-right.svg" type="image/svg+xml">your
+                                browser does not support
+                                this svg</object>
+                        </a>
+                        <a href="https://github.com/Yellow-May/TV-Shows-search-site" target="_blank">
+                            <span>Github Repo</span> <object data="./imgs/svgs/angle-right.svg"
+                                type="image/svg+xml">your browser does not support
+                                this svg</object>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="./imgs/project-imgs/shop-app.jpeg" alt="shop site" class="preview">
+                    <div class="content">
+                        <h1>React Shopping App</h1>
+                        <p>Developed with React, React router hooks, React Context Api hooks and CSS</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://shop-app-ymay.netlify.app/" target="_blank">
+                            <span>Live Site</span> <object data="./imgs/svgs/angle-right.svg" type="image/svg+xml">your
+                                browser does not support
+                                this svg</object>
+                        </a>
+                        <a href="https://github.com/Yellow-May/react-shopping-app" target="_blank">
+                            <span>Github Repo</span> <object data="./imgs/svgs/angle-right.svg"
+                                type="image/svg+xml">your browser does not support
+                                this svg</object>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="github-repo">
+                More Projects at <a href="https://github.com/Yellow-May?tab=repositories" target="_blank">my Github
+                    Repo</a>
+            </p>
+        </section>
+
+        <section class="contact">
+            <div class="intro">
+                <h1>Contact</h1>
+            </div>
+            <div class="contact-details">
+                <div class="detail">
+                    <object data="./imgs/svgs/map-marker.svg" type="image/svg+xml">your browser does not support this
+                        svg</object>
+                    <p>Umuahia, Abia State, Nigeria</p>
+                </div>
+                <div class="detail">
+                    <object data="./imgs/svgs/phone.svg" type="image/svg+xml">your browser does not support this
+                        svg</object>
+                    <p>+234 9071067543</p>
+                </div>
+                <div class="detail">
+                    <object data="./imgs/svgs/envelope.svg" type="image/svg+xml">your browser does not support this
+                        svg</object>
+                    <p>onyekwerechidip@gmail.com</p>
+                </div>
+            </div>
+            <div class="form">
+                <h1>Send a message</h1>
+                <form action="https://formspree.io/f/xdopblag" method="POST" id="message">
+                    <input type="text" name="userEmail" id="userEmail" placeholder="enter email..." title="enter email"
+                        required>
+                    <textarea name="userMessage" id="userMessage" cols="30" rows="10" placeholder="enter message..."
+                        title="enter message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+
+            <div class="modal-message" id="modalMessage">
+                <p>Thank you for contacting me, will be sure to get back to you if neccessary.</p>
+                <button id="close" title="close message">Ok</button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

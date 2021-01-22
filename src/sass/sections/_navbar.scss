@@ -1,0 +1,74 @@
+.navbar {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	padding: 0.75rem 2rem;
+	background: rgb(0, 0, 0);
+	box-shadow: 0.25rem 0.125rem 0.5rem rgba(0, 0, 0, 0.5);
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	img.logo {
+		width: 3rem;
+		height: 3rem;
+	}
+
+	nav {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2rem;
+
+		button {
+			position: relative;
+			width: 7.5rem;
+			height: 2.25rem;
+			border-radius: 0.25rem;
+			cursor: pointer;
+
+			span {
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: inherit;
+				display: grid;
+				place-items: center;
+				background: rgb(0, 0, 0);
+				color: rgb(255, 255, 255);
+				letter-spacing: 0.125rem;
+				font-size: 0.875rem;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: -0.15rem;
+				left: -0.15rem;
+				right: -0.15rem;
+				bottom: -0.15rem;
+				transform: scale(0);
+				-webkit-transform: scale(0);
+				transform-origin: bottom left;
+				-webkit-transform-origin: bottom left;
+				transition: 0.25s;
+				background: rgba(255, 255, 0, 0.875);
+				border-radius: inherit;
+			}
+
+			&:hover::before {
+				transform: scale(1);
+				-webkit-transform: scale(1);
+			}
+		}
+	}
+
+	.nav-btn {
+		display: none;
+	}
+}

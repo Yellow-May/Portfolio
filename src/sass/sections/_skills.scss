@@ -1,0 +1,209 @@
+section.skills {
+	.techs {
+		width: 100%;
+		margin: auto;
+		height: 35rem;
+		overflow: hidden;
+		border-radius: 1.75rem;
+		position: relative;
+		border: 0.25rem solid rgba(white, 0.2);
+		box-shadow: 0rem -1rem 1rem rgba(black, 0.1);
+		background: rgba(white, 0.75);
+		color: black;
+
+		.refresh {
+			position: absolute;
+			z-index: 5;
+			top: 2.5%;
+			right: 2.5%;
+			cursor: pointer;
+			width: 2.5rem;
+			height: 2.5rem;
+			border-radius: 50%;
+			display: none;
+		}
+
+		.card {
+			position: absolute;
+			z-index: 4;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			transition: 0.5s;
+			cursor: pointer;
+			background: rgba(255, 255, 0, 0.65);
+
+			&::before {
+				content: "";
+				position: absolute;
+				pointer-events: none;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					rgba(white, 0.5),
+					transparent,
+					rgba(white, 0.1)
+				);
+			}
+
+			.brand-logo {
+				position: absolute;
+				pointer-events: none;
+				transition: 0.75s;
+				height: 6.5rem;
+			}
+
+			.content {
+				position: absolute;
+				top: 15%;
+				left: -300%;
+				padding: 10%;
+				pointer-events: none;
+				transition: 1s;
+
+				h1 {
+					font-size: 1.5em;
+					font-weight: 700;
+					padding-bottom: 1.25rem;
+					text-transform: uppercase;
+					letter-spacing: 0.25rem;
+				}
+
+				ul {
+					li {
+						font-size: 1.25em;
+						padding: 0.5rem;
+					}
+				}
+			}
+
+			&.html {
+				clip-path: polygon(0 0, 19% 0, 9% 39%, 0 59%);
+
+				.brand-logo {
+					top: 15%;
+					left: 2.5%;
+				}
+			}
+
+			&.css {
+				clip-path: polygon(0 61%, 9% 41%, 24.5% 100%, 0 100%);
+
+				.brand-logo {
+					top: 68.5%;
+					left: 5%;
+				}
+			}
+
+			&.js {
+				clip-path: polygon(19.5% 0, 29.5% 39.5%, 19.5% 79%, 9.5% 39.5%);
+
+				.brand-logo {
+					top: 30%;
+					left: 16%;
+				}
+			}
+
+			&.reactJs {
+				clip-path: polygon(20% 0, 44% 0, 54% 39%, 30% 39%);
+
+				.brand-logo {
+					top: 10.5%;
+					left: 33.5%;
+				}
+			}
+
+			&.bootstrap {
+				clip-path: polygon(20% 80%, 30% 41%, 54% 100%, 25% 100%);
+
+				.brand-logo {
+					top: 69%;
+					left: 29%;
+				}
+			}
+
+			&.sass {
+				clip-path: polygon(44.5% 0, 69% 0, 64% 59%, 54.5% 39%);
+
+				.brand-logo {
+					top: 15%;
+					left: 55%;
+				}
+			}
+
+			&.typescript {
+				clip-path: polygon(
+					30.5% 40.5%,
+					54.5% 40.5%,
+					64% 61%,
+					54.75% 100%
+				);
+
+				.brand-logo {
+					top: 55%;
+					left: 48.5%;
+				}
+			}
+
+			&.jquery {
+				clip-path: polygon(69.5% 0, 89.5% 0, 79.5% 54.5%, 64.5% 59.5%);
+
+				.brand-logo {
+					top: 18%;
+					left: 71.5%;
+				}
+			}
+
+			&.gsap {
+				clip-path: polygon(
+					64.5% 61%,
+					79.5% 55.5%,
+					84.5% 100%,
+					55.5% 100%
+				);
+
+				.brand-logo {
+					top: 72.5%;
+					left: 67.5%;
+				}
+			}
+
+			&.npm {
+				clip-path: polygon(90% 0, 100% 0, 100% 49.5%, 80% 54.5%);
+
+				.brand-logo {
+					top: 18%;
+					left: 89%;
+				}
+			}
+
+			&.git {
+				clip-path: polygon(80% 55.5%, 100% 50.5%, 100% 100%, 85% 100%);
+
+				.brand-logo {
+					top: 65%;
+					left: 87%;
+				}
+			}
+
+			&.open {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+				cursor: unset;
+
+				.brand-logo {
+					top: 15%;
+					left: 10%;
+				}
+
+				.content {
+					left: 0%;
+				}
+			}
+
+			&.close {
+				clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+			}
+		}
+	}
+}

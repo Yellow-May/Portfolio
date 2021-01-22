@@ -1,0 +1,42 @@
+@media (max-width: 1024px) {
+	body {
+		font-size: 0.875rem;
+
+		.navbar {
+			width: 100%;
+			padding: 0.75rem 1.5rem;
+
+			nav button {
+				width: 6.5rem;
+			}
+		}
+
+		main {
+			section {
+				padding: 10% 5%;
+				gap: 1.5rem;
+			}
+
+			section.home {
+				padding: 0 10%;
+				height: 50vh;
+
+				.content span {
+					padding-bottom: 1.5rem;
+				}
+			}
+
+			section.skills {
+				.techs {
+					height: 28rem;
+
+					.card {
+						.brand-logo {
+							height: 4.5rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
