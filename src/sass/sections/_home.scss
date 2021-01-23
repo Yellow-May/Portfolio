@@ -11,7 +11,8 @@ section.home {
 
 	.content {
 		width: 100%;
-		background: url("./imgs/img040640.jpg") center center/cover;
+		background: linear-gradient(rgba(black, 0.375), rgba(black, 0.75)),
+			url("./imgs/img040640.jpg") center center/cover;
 		background-clip: text;
 		-webkit-background-clip: text;
 
@@ -75,7 +76,7 @@ section.home {
 		}
 
 		.more.active {
-			height: 18rem;
+			height: 25rem;
 			padding: 1rem;
 		}
 	}

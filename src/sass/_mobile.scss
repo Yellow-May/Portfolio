@@ -74,13 +74,11 @@
 			}
 
 			section.home {
-				height: 100%;
 				grid-template-columns: auto;
-				padding: 20% 10%;
 				gap: 2rem;
 
 				.content .more.active {
-					height: 20rem;
+					height: 23rem;
 					padding: 0.75rem 0;
 				}
 
