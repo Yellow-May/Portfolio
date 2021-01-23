@@ -129,41 +129,34 @@ if (cards && refreshBtn) {
 }
 
 const messageForm = <HTMLFormElement>document.getElementById("message");
+const formBtn = messageForm?.querySelector("button");
 const email = <HTMLInputElement>document.getElementById("userEmail");
 const modalDiv = document.getElementById("modalMessage");
 const modalMessage = modalDiv?.querySelector("p");
 const modalBtn = modalDiv?.querySelector("button");
 
-if (messageForm && modalDiv && modalBtn && modalMessage) {
-	const success = () => {
-		messageForm.reset();
-		modalDiv.style.top = "0";
-		modalMessage.innerHTML =
-			"Thank you for contacting me, will be sure to get back to you if neccessary.";
-	};
-
-	const error = (messageText: string) => {
+if (messageForm && formBtn && modalDiv && modalBtn && modalMessage) {
+	const message = (messageText: string) => {
 		messageForm.reset();
 		modalDiv.style.top = "0";
 		modalMessage.innerHTML = messageText;
+		formBtn.innerHTML = "Send";
+		formBtn.style.opacity = "1";
+		formBtn.style.pointerEvents = "all";
 	};
 
-	const ajaxCall = (
-		method: string,
-		url: string,
-		data: FormData,
-		success: () => void,
-		error: (messageText: string) => void
-	) => {
+	const ajaxCall = (method: string, url: string, data: FormData) => {
 		var xhr = new XMLHttpRequest();
 		xhr.open(method, url);
 		xhr.setRequestHeader("Accept", "application/json");
 		xhr.onreadystatechange = function () {
 			if (xhr.readyState !== XMLHttpRequest.DONE) return;
 			if (xhr.status === 200) {
-				success();
+				message(
+					"Thank you for contacting me, will be sure to get back to you if neccessary."
+				);
 			} else {
-				error("Oops! There was a problem.");
+				message("Oops! There was a problem.");
 			}
 		};
 		xhr.send(data);
@@ -173,15 +166,13 @@ if (messageForm && modalDiv && modalBtn && modalMessage) {
 		e.preventDefault();
 		const data = new FormData(messageForm);
 		const res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		formBtn.innerHTML = "...";
+		formBtn.style.opacity = "0.5";
+		formBtn.style.pointerEvents = "none";
+
 		if (res.test(email.value)) {
-			ajaxCall(
-				messageForm.method,
-				messageForm.action,
-				data,
-				success,
-				error
-			);
-		} else error("Invalid Email address!, please check again");
+			ajaxCall(messageForm.method, messageForm.action, data);
+		} else message("Invalid Email address!, please check again");
 	});
 
 	modalBtn.addEventListener("click", () => {

@@ -106,23 +106,21 @@ if (cards && refreshBtn) {
     });
 }
 const messageForm = document.getElementById("message");
+const formBtn = messageForm === null || messageForm === void 0 ? void 0 : messageForm.querySelector("button");
 const email = document.getElementById("userEmail");
 const modalDiv = document.getElementById("modalMessage");
 const modalMessage = modalDiv === null || modalDiv === void 0 ? void 0 : modalDiv.querySelector("p");
 const modalBtn = modalDiv === null || modalDiv === void 0 ? void 0 : modalDiv.querySelector("button");
-if (messageForm && modalDiv && modalBtn && modalMessage) {
-    const success = () => {
-        messageForm.reset();
-        modalDiv.style.top = "0";
-        modalMessage.innerHTML =
-            "Thank you for contacting me, will be sure to get back to you if neccessary.";
-    };
-    const error = (messageText) => {
+if (messageForm && formBtn && modalDiv && modalBtn && modalMessage) {
+    const message = (messageText) => {
         messageForm.reset();
         modalDiv.style.top = "0";
         modalMessage.innerHTML = messageText;
+        formBtn.innerHTML = "Send";
+        formBtn.style.opacity = "1";
+        formBtn.style.pointerEvents = "all";
     };
-    const ajaxCall = (method, url, data, success, error) => {
+    const ajaxCall = (method, url, data) => {
         var xhr = new XMLHttpRequest();
         xhr.open(method, url);
         xhr.setRequestHeader("Accept", "application/json");
@@ -130,10 +128,10 @@ if (messageForm && modalDiv && modalBtn && modalMessage) {
             if (xhr.readyState !== XMLHttpRequest.DONE)
                 return;
             if (xhr.status === 200) {
-                success();
+                message("Thank you for contacting me, will be sure to get back to you if neccessary.");
             }
             else {
-                error("Oops! There was a problem.");
+                message("Oops! There was a problem.");
             }
         };
         xhr.send(data);
@@ -142,11 +140,14 @@ if (messageForm && modalDiv && modalBtn && modalMessage) {
         e.preventDefault();
         const data = new FormData(messageForm);
         const res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        formBtn.innerHTML = "...";
+        formBtn.style.opacity = "0.5";
+        formBtn.style.pointerEvents = "none";
         if (res.test(email.value)) {
-            ajaxCall(messageForm.method, messageForm.action, data, success, error);
+            ajaxCall(messageForm.method, messageForm.action, data);
         }
         else
-            error("Invalid Email address!, please check again");
+            message("Invalid Email address!, please check again");
     });
     modalBtn.addEventListener("click", () => {
         modalDiv.style.top = "-100%";
